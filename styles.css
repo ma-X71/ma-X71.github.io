@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 body {
     background-image: url("background2.png");
@@ -48,9 +49,52 @@ h3 {
     border-radius: 10px;
     background-color: aqua;
 }
-#photo {
-    width: 200px;
-    height: 400px;
-    border-radius: 50%;
-    margin-top: 30px;
+#container2 {
+    border: solid 1px black;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    gap : 10px;
+}
+.boite {
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    height: 33.33%;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f047218e;
+}
+#container3 {
+    width: 33.3%;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border : solid 1px black;
+}
+.boite3 {
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f047218e;
+    box-sizing: border-box;
+}
+#container3bis {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
 }
