@@ -29,15 +29,24 @@ h3 {
 #heading {
     display : flex;
     justify-content : center;
+    align-items: center;
     background-color: #f047218e;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 #container {
     border: solid 1px black;
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 30px auto 0;
+    box-sizing: border-box;
 }
 .child1 {
     display: flex;
@@ -56,6 +65,9 @@ h3 {
     justify-content: space-around;
     align-items: stretch;
     gap : 10px;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
 }
 .boite {
     border: solid 1px black;
@@ -81,7 +93,7 @@ h3 {
     border: solid 1px black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin: 5px;
     border-radius: 10px;
@@ -92,9 +104,32 @@ h3 {
 #container3bis {
     border: solid 1px black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+}
+.boite4 {
+    border: solid 1px black;
+    display : block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 71, 133, 0.56);
+    padding: 2px;
+    border-radius: 5px;
+}
+#container4 {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#photo {
+    width: 150px;
+    height: 210px;
+    background-color: #43ca28;
+    align-self: center;
 }
