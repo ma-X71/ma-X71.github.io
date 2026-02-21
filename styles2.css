@@ -1,0 +1,155 @@
+#heading { /* titre du heading */
+    display: flex;
+    box-sizing: border-box;
+    width: 90%;
+    border: solid blue 1px;
+    margin: 0 auto ;
+    justify-content: center;
+}
+p {
+    margin: 0%;
+    padding: 0%;
+}
+body { /* fond d'écran*/
+    background-image: url("background2.png");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+#nav1 { /* panneau de navigation principal*/
+    
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    backgrouborder: solid 1px black ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;nd-color: rgb(87, 87, 236);
+
+}
+.button1 { /* boutton sur le nav1 */
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: aqua;
+    display: flex;            /* active le flex pour le contenu */
+    justify-content: center;  /* centre horizontalement le texte */
+    align-items: center;      /* centre verticalement le texte */
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.divphoto{ /*petit exemple de la place d'une photo (en jaune)*/
+    background-color: rgb(255, 255, 0);
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 8000;
+    width: 90%;
+    height: 95%;
+    border-radius: 10px;
+}
+.grid { /*premiere grid*/
+    display: grid;
+    border: 1px black solid;
+    width: 80%;          /* ← prend 90% de la page */
+    margin: 0 auto;      /* ← centre horizontalement */
+    grid-template-columns:1fr 2fr 1fr; 
+    grid-template-rows: repeat(1, 500px);
+
+    place-items: center;
+    gap: 12px;
+}
+.child{ /*carré bleu utile pour test les grid*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+}
+.grid2 { /*colonne central du main */
+    display: grid;
+    border: solid black 1px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4 , 25%);
+    place-content: center;
+    box-sizing: border-box;
+
+}
+.childtitle{ /*titre de la grid principale*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 81, 42, 0.732);
+    border: dashed black 2px;
+    grid-column: 1 / span 3; 
+    grid-row: 1;   
+}
+.childphoto{ /*photo a gauche de la grid principale*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 81, 42, 0.732);
+    border: dashed black 2px;
+    grid-row: span 2; 
+    grid-column: 1;
+}
+.childmain{ /*main de la grid principale*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 81, 42, 0.732);
+    grid-row: 2/ span 2; 
+    grid-column: 2 / span2 ; 
+}
+.matrice3x4{ /*décomposition de la main grid en 3x4*/
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3 , 33.33%);
+    place-content: center;
+    box-sizing: border-box;
+}
+.childphoto3x4gauche{ /*décomposition en deux de la 3x4 gauche*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(38, 4, 255, 0.732);
+    grid-column: 1 / 3;   /* colonne 1 à 2 */
+    grid-row: 1 / 4;
+}
+.childphoto3x4droite{ /*décomposition en deux de la 3x4 droite*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(38, 4, 255, 0.732);
+    grid-column: 3 / 5;   /* colonne 1 à 2 */
+    grid-row: 1 / 4;
+
+}
+.box { /* box contenant les différents <p> , ils sont au nombre de 2 dans la main grid*/
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.boxpointille { /* boite avec petit pointillé sur toute la longueur de la div*/
+    width: 100%;
+    border-top: black 1px dashed;
+    border-bottom: 1px black dashed;
+}
