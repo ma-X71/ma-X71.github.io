@@ -5,6 +5,7 @@
     border: solid blue 1px;
     margin: 0 auto ;
     justify-content: center;
+    background-image: url("pixel.png") ;
 }
 *{
     font-family: MS gothic;
