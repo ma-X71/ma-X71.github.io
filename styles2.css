@@ -6,9 +6,11 @@
     margin: 0 auto ;
     justify-content: center;
 }
+*{
+    font-family: MS gothic;
+}
 p {
     margin: 0%;
-    padding: 0%;
 }
 body { /* fond d'écran*/
     background-image: url("background2.png");
@@ -20,11 +22,11 @@ body { /* fond d'écran*/
     width: 80%;
     margin: 0 auto;
     box-sizing: border-box;
-    backgrouborder: solid 1px black ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;nd-color: rgb(87, 87, 236);
+    flex-direction: row;
+    background-color: rgb(87, 87, 236);
 
 }
 .button1 { /* boutton sur le nav1 */
@@ -66,25 +68,36 @@ h2 {
     place-items: center;
     gap: 12px;
 }
-.child{ /*carré bleu utile pour test les grid*/
+.child {
+    width: 100%;              /* largeur fixe pour test */
+    height: 100%;             /* hauteur fixe pour test */
+    background-image: url("pixel.png");
+    background-size: cover;
+    background-color: #333;
+    border: 4px solid #888;    /* marge extérieure */
+    padding: 16px;             /* marge intérieure */
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
-    width: 100%;
-    height: 100%;
-    border: solid 1px black;
+    color: white;
 }
-.grid2 { /*colonne central du main */
+
+.child iframe {
+    width: 120%;
+    height: 120%;
+    border: 0;
+    display: block;
+}
+.grid2 {
     display: grid;
-    border: solid black 1px;
+    border: 1px solid black;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4 , 25%);
-    place-content: center;
+    grid-template-columns: repeat(3, calc((100% - 6px)/3)); /* 3px de gap entre colonnes → 2 gaps = 6px */
+    grid-template-rows: repeat(4, calc((100% - 9px)/4));   /* 3px de gap entre 4 lignes → 3 gaps = 9px */
+    gap: 3px;
     box-sizing: border-box;
-
 }
 .childtitle{ /*titre de la grid principale*/
     display: flex;
@@ -120,6 +133,7 @@ h2 {
     grid-template-rows: repeat(3 , 33.33%);
     place-content: center;
     box-sizing: border-box;
+    grid-row: 5px;
 }
 .childphoto3x4gauche{ /*décomposition en deux de la 3x4 gauche*/
     display: flex;
@@ -134,7 +148,7 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: rgba(38, 4, 255, 0.732);
-    grid-column: 3 / 5;   /* colonne 1 à 2 */
+    grid-column: 3 / 5;   /* colonne 2 à 4 */
     grid-row: 1 / 4;
 
 }
@@ -144,12 +158,41 @@ h2 {
     flex-direction: column;
     margin: 0 auto;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
+    gap: 0px;
 }
 .boxpointille { /* boite avec petit pointillé sur toute la longueur de la div*/
     width: 100%;
     border-top: black 1px dashed;
     border-bottom: 1px black dashed;
+    padding-left: 8px;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.childphotov{ /*photo a gauche de la grid main principale*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 81, 42, 0.732);
+    border: dashed black 2px;
+    grid-row: 4; 
+    grid-column: 1 / 3;
+}
+.box2 {
+    width: 95%;
+}
+.box3 {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.box3 img {
+    max-width: 93%;
+    height: auto;
 }
