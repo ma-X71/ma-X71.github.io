@@ -111,12 +111,15 @@ h2 {
 }
 .childphoto{ /*photo a gauche de la grid principale*/
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  /* centre horizontalement le GIF */
+    align-items: center;      /* centre verticalement */
     background-color: rgba(165, 81, 42, 0.732);
     border: dashed black 2px;
     grid-row: span 2; 
     grid-column: 1;
+    flex-direction: column;
+    overflow: hidden;         /* cache le bas du GIF si nécessaire */
+    position: relative;       /* nécessaire pour l'iframe en absolute */
 }
 .childmain{ /*main de la grid principale*/
     display: flex;
