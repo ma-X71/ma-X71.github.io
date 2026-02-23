@@ -27,7 +27,8 @@ body { /* fond d'écran*/
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(87, 87, 236);
+    background-color: rgb(145, 128, 255, 0.732);
+    border: 4px solid #001aff; 
 
 }
 .button1 { /* boutton sur le nav1 */
@@ -49,14 +50,9 @@ h2 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.divphoto{ /*petit exemple de la place d'une photo (en jaune)*/
-    background-color: rgb(255, 255, 0);
-    padding: 15px;
-    box-sizing: border-box;
-    z-index: 8000;
-    width: 90%;
-    height: 95%;
-    border-radius: 10px;
+h3 {
+    margin: 0%;
+    padding: 7%;
 }
 .grid { /*premiere grid*/
     display: grid;
@@ -70,8 +66,8 @@ h2 {
     gap: 12px;
 }
 .child {
-    width: 100%;              /* largeur fixe pour test */
-    height: 100%;             /* hauteur fixe pour test */
+    width: 100%;             
+    height: 100%;             
     background-image: url("pixel.png");
     background-size: cover;
     background-color: #333;
@@ -92,7 +88,6 @@ h2 {
 }
 .grid2 {
     display: grid;
-    border: 1px solid black;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(3, calc((100% - 6px)/3)); /* 3px de gap entre colonnes → 2 gaps = 6px */
@@ -104,17 +99,19 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(165, 81, 42, 0.732);
+    background-color: rgba(145, 128, 255, 0.732);
     border: dashed black 2px;
     grid-column: 1 / span 3; 
-    grid-row: 1;   
+    grid-row: 1;
+    border: 4px solid #9fa1b3;
+    
 }
 .childphoto{ /*photo a gauche de la grid principale*/
     display: flex;
     justify-content: center;  /* centre horizontalement le GIF */
     align-items: center;      /* centre verticalement */
-    background-color: rgba(165, 81, 42, 0.732);
-    border: dashed black 2px;
+    background-color: rgba(42, 44, 165, 0.732);
+    border: dashed rgb(148, 146, 146) 4px;
     grid-row: span 2; 
     grid-column: 1;
     flex-direction: column;
@@ -125,25 +122,26 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(165, 81, 42, 0.732);
     grid-row: 2/ span 2; 
     grid-column: 2 / span2 ; 
 }
 .matrice3x4{ /*décomposition de la main grid en 3x4*/
     display: grid;
-    width: 100%;
+    width: 99%;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(3 , 33.33%);
     place-content: center;
     box-sizing: border-box;
     grid-row: 5px;
+    background-color: #333;
+    border: 4px solid #888;
 }
 .childphoto3x4gauche{ /*décomposition en deux de la 3x4 gauche*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(38, 4, 255, 0.732);
+    background-color: rgba(145, 128, 255, 0.732);
     grid-column: 1 / 3;   /* colonne 1 à 2 */
     grid-row: 1 / 4;
 }
@@ -151,13 +149,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(38, 4, 255, 0.732);
+    background-color: rgba(145, 128, 255, 0.732);
     grid-column: 3 / 5;   /* colonne 2 à 4 */
     grid-row: 1 / 4;
 
 }
 .box { /* box contenant les différents <p> , ils sont au nombre de 2 dans la main grid*/
-    border: solid 1px black;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -179,7 +176,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(165, 81, 42, 0.732);
+    background-color: rgba(145, 128, 255, 0.732);
     border: dashed black 2px;
     grid-row: 4; 
     grid-column: 1 / 3;
@@ -187,7 +184,7 @@ h2 {
 .box2 {
     width: 95%;
 }
-.box3 {
+.box3 { /* box avec le sybau et le veangelion*/
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -199,4 +196,14 @@ h2 {
 .box3 img {
     max-width: 93%;
     height: auto;
+}
+.boxbouton {
+    width: 100%;
+    padding-left: 8px;
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 6px;
+    margin: 2px;
+    
 }
